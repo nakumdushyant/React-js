@@ -1,0 +1,131 @@
+  1.what is react js ?
+    
+  =>React is an open source javascript library.
+
+
+
+ 2.What is NPM in React js ?
+
+ =>NPM : Node Package Manager.
+ =>npm is the world largest Software Registry.
+ =>Open source developers use npm to share software.
+
+
+
+ 3.What is Role of Node js in React js ?
+
+ =>Node is the most popular platform for hosting and running web servers for React apps.
+
+
+
+ 4.What is CLI Command in React js ?
+
+ =>CLI : Command line interface
+ =>CLI command use for make React application.
+ => example :create-react-app,cd myapp, ....
+
+
+
+ 5.What is component in React js ?
+
+ =>React Component is indivisual and reusable unit of code.
+ =>two type component : 1.functional component
+                      : 2.Class component
+
+
+ 6.How to check version of NPM?
+
+ =>using (node -v) command.
+
+
+
+ 7.How to check version of React Js ?
+
+ =>using (npm view react version) command.
+
+
+              Task-1.............................................!
+
+
+
+8.  Create Increment decrement state change by button click?
+   
+   ans => 
+
+                  
+
+import React from "react"
+
+class Nakum extends React.Component 
+{
+
+    constructor()
+    {
+        super();
+        this.state = {Num:1}   
+    }
+
+    // Using constructor  
+
+
+    inc = ()=>{
+
+        this.setState((prev)=>(
+            {Num:prev.Num+1}
+        ))
+    }
+    // it is increement function.
+
+
+    
+    dec = ()=>{
+        this.setState({Num:this.state.Num-1})
+    }  
+
+    // it is decreement function.
+
+
+
+    stop = ()=>{
+
+        this.setState(()=>(
+            {Num:0}
+        ))
+    }         
+    // it is Stop function.
+
+
+    render()
+    {
+        return(
+            < >
+                <div style={{marginTop:0,textAlign:"center",backgroundColor:"blue", height:700,}}>
+
+
+                <h1  style={{fontSize:100, color: "red",textShadow:"black" ,}}>{this.state.count}</h1>
+                  {/* increment/decrement/zero h1 tag  */}
+
+                <button style={{fontSize:30, color: "red", margin:50,}}  onClick={this.dec} >Decrement</button>
+                  {/* Decrement button  */}
+               
+                <button style={{fontSize:30, color: "red", margin:50, border:10, }} onClick={this.inc}>Increment</button>
+                    {/*  Increment button */}
+                <br/>
+                <button style={{fontSize:30, color: "red", margin:50, border:10, }} onClick={this.stop}>Re Start</button> 
+                    {/* Reset button  */}
+                </div>
+            </>
+        )
+    }
+}
+
+export default Nakum;
+
+
+
+
+
+
+
+
+ 
